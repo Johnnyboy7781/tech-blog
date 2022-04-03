@@ -33,7 +33,6 @@ router.get('/', (req, res) => {
             res.render('homepage', { 
                 posts,
                 loggedIn: req.session.loggedIn,
-                page: "The Tech Blog" 
             })
         })
         .catch(err => {
@@ -48,9 +47,11 @@ router.get('/login', (req, res) => {
         return;
     }
     
-    res.render('login', {
-        page: "login"
-    });
+    res.render('login');
+});
+
+router.get('/signup', (req, res) => {
+    res.render('signup')
 })
 
 router.get('/post/:id', (req, res) => {
@@ -90,7 +91,7 @@ router.get('/post/:id', (req, res) => {
 
             res.render('single-post', { 
                 post,
-                loggedIn: req.session.loggedIn
+                loggedIn: req.session.loggedIn,
             });
         })
         .catch(err => {

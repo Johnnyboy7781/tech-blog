@@ -94,11 +94,13 @@ main {
     padding: 10px;
 }
 
-.title h3 {
+.title a {
     transition: 150ms;
+    text-decoration: none;
+    color: var(--accent);
 }
 
-.title h3:hover {
+.title a:hover {
     color: var(--background);
     cursor: pointer;
 }
@@ -110,4 +112,96 @@ main {
 
 .meta {
     padding: 10px;
+}
+
+/* Login/Signup Form Styles */
+.login-form, .signup-form {
+    background-color: var(--primary);
+    color: var(--background);
+    border: 2px solid var(--primary);
+}
+
+.login-form h2, .signup-form h2 {
+    padding: 10px;
+}
+
+.input-container {
+    background-color: var(--background);
+    color: var(--primary);
+    padding: 17px;
+}
+
+.input-container div {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+input, 
+button {
+    padding: 6px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #666666;
+    border-radius: 5px;
+    color: var(--background);
+    transition: 150ms;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.login-form a, .signup-form a {
+    text-decoration: none;
+    color: blue;
+    font-size: 17px;
+}
+
+.login-form a:hover, .signup-form a:hover {
+    text-decoration: underline;
+}
+
+/* Single post styles */
+.comment-form, .comments {
+    margin: 20px 0;
+    border: 2px solid var(--primary);
+    padding: 6px;
+}
+
+.comment-form div {
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    resize: none;
+    height: 60px;
+    padding: 5px;
+}
+
+.comment .text {
+    padding: 5px;
+}
+
+.comment .meta {
+    font-size: 16px;
+}
+
+.comment:nth-child(even) {
+    background-color: #20111014;
+}
+
+/* Footer styles */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: var(--primary);
+    color: var(--background);
+    font-size: 20px;
 }
