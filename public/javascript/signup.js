@@ -15,7 +15,7 @@ const signupFormHandler = async (e) => {
     });
 
     if (res.ok) {
-      console.log("success");
+      document.location.replace("/dashboard");
     } else {
       alert(res.statusText);
     }

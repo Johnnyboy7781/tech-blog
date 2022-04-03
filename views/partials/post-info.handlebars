@@ -1,13 +1,9 @@
 <article class="post">
     <div class="title">
-        <h3><a href="/post/1">{{title}}</a></h3>
+        <h3><a href="/post/{{id}}">{{title}}</a></h3>
         <h4>Post by {{ user.username }} on {{ format_date created_at }}</h4>
     </div>
     <div class="meta">
         {{ content }}
-        {{!-- {{vote_count}} {{format_plural "point" vote_count}} by {{user.username}} on
-        {{format_date created_at}}
-        |
-        <a href="/post/{{id}}">{{comments.length}} {{format_plural "comment" comments.length}}</a> --}}
     </div>
 </article>

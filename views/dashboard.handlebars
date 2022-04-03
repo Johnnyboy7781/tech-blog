@@ -1,0 +1,21 @@
+{{#if posts.length}}
+<section>
+  <h2>Your Posts</h2>
+  <ul class="user-post-list">
+    {{#each posts as |post|}}
+    <li>
+        <a href="/dashboard/edit/{{id}}" class="title user-post">
+            <h3>{{title}}</h3>
+            <h4>Post by {{ user.username }} on {{ format_date created_at }}</h4>
+        </a>
+    </li>
+    {{/each}}
+  </ul>
+</section>
+{{else}}
+<h2>No posts yet 😥</h2>
+{{/if}}
+
+<section class="new-post-button-container">
+    <a class="new-post-button" href="/dashboard/new-post">+New Post</a>
+</section>

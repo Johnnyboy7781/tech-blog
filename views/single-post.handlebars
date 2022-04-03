@@ -12,7 +12,11 @@
 </form>
 {{/if}}
 
+{{#if post.comments}}
 {{> comments post.comments }}
+{{else}}
+<h2>No comments yet 😥</h2>
+{{/if}}
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
